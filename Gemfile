@@ -45,3 +45,5 @@ gem "simple_form"
 gem "sqlite3", :group => [:development, :test]
 
 gem "pg", :group => [:production]
+
+gem "thin"
