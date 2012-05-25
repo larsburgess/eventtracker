@@ -1,7 +1,9 @@
 Eventtracker::Application.routes.draw do
-  root :to => 'home#index'
+  resources :events
 
-  get "home/index"
+  root :to => 'events#index'
+
+  get "events/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
