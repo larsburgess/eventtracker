@@ -3,11 +3,11 @@ class Event < ActiveRecord::Base
 
   include Rhoconnect::Resource
 
-  def partition 
-    lambda { 'lars' }
+  def partition
+  	lambda { "lars" }
   end
 
   def self.rhoconnect_query(partition)
-    Event.all
+  	Event.all
   end
 end
