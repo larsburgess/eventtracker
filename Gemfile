@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'eventmachine', '1.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -37,13 +38,14 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :assets do
-  gem "twitter-bootstrap-rails"
-  gem "therubyracer"
+  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => 'static'
 end
 
 gem "simple_form"
 gem "sqlite3", :group => [:development, :test]
 
-gem "pg", :group => [:production]
+group :production do
+  gem "pg"
+end
 
 gem "thin"
